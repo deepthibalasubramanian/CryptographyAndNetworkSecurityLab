@@ -13,3 +13,17 @@ print(f"You entered depth, m = {depth}")
 p_t_length = len(plain_text)
 print(f"Length of plaintext is: {p_t_length}")
 
+#find dimension of matrix
+dim = p_t_length//depth
+#print(dim)
+rem = p_t_length%depth
+#print(rem)
+
+#create matrix
+matrix = [depth][dim+1]
+counter=0
+for i in range(depth):
+    for j in range(dim+1):
+        matrix[i][j].append(plain_text[counter])
+        print(matrix[i][j])
+        counter+=1
